@@ -1,0 +1,141 @@
+# User API Documentation
+
+## Overview
+This API allows you to manage users, including creating, retrieving, updating, and deleting user information.
+
+### Base URL
+`http://localhost:8000/`
+
+## Endpoints
+
+### 1. List Users
+
+**URL:** `/user-list/`
+
+**Method:** `GET`
+
+**Description:** Retrieve a list of all users.
+
+**Response:**
+```json
+[
+    {
+        "id": 1,
+        "username": "user1",
+        "first_name": "First",
+        "last_name": "User",
+        "email": "user1@example.com"
+    },
+    ...
+]
+
+2.To make a POST request to create a user, follow these steps:
+
+
+*** Set the Method to POST.
+Enter the URL: http://127.0.0.1:8000/user-create/
+**Set Headers:
+Key: Content-Type
+Value: application/json
+**Set the Body:
+Choose raw and select JSON format.
+Enter the following JSON data
+
+**
+{
+    "username": "newuser",
+    "first_name": "New",
+    "last_name": "User",
+    "email": "newuser@example.com",
+    "password": "pass12345",
+   
+}
+
+
+3. Retrieve User by ID
+URL: /user-detail/<str:pk>/
+
+Method: GET
+
+Description: Retrieve a user by their ID.
+
+
+
+4. Retrieve User by Name
+URL: /user-detail-by-name/
+
+Method: GET
+
+Query Parameter: username (required)
+
+Description: Retrieve a user by their username.
+curl -X DELETE "http://localhost:8000/user-detail-by-name/?username=user1"
+
+
+
+
+5. Update User by ID
+URL: /user-update-by-id/<str:pk>/
+
+Method: PUT
+
+Description: Update an existing user by their ID.
+
+***Request Body:
+{
+    "username": "updateduser",
+    "first_name": "Updated",
+    "last_name": "User"
+}
+
+
+6. Delete User by ID
+URL: /user-delete-by-id/<str:pk>/
+
+Method: DELETE
+
+
+
+8. Delete User by Name
+URL: /user-delete-by-name/
+
+Method: DELETE
+
+Query Parameter: username (required)
+ "http://localhost:8000/user-delete-by-name/?username=user1"
+
+
+
+
+*******Instructions on how to run the API locally (e.g., using command line commands).
+
+Step 1: Clone Your Project Repository
+
+Step 2: Set Up a Virtual Environment 
+****python -m venv env
+
+****env\Scripts\activate
+
+
+Step 3: Install Dependencies
+****pip install -r requirements.txt
+
+
+Step 4: Set Up Database
+***python manage.py migrate
+
+
+Step 5: Run the Development Server
+***python manage.py runserver
+
+
+Step 6: Accessing the API
+***  http://127.0.0.1:8000/
+
+
+Step 7: Testing API Endpoints
+***  http://127.0.0.1:8000/user-create/
+
+
+
+
