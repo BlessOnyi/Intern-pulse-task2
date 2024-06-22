@@ -1,7 +1,10 @@
-User Management System API with Django and DRF
+                                                            User Management System API with Django and DRF
+
+
 This repository contains a User Management System API built using Django and Django Rest Framework (DRF). The API provides endpoints for managing user data including creation, retrieval, update, and deletion operations.
 
-Features
+                                                                          Features
+
 API Overview: Displays available endpoints and their descriptions.
 User List: Retrieves a list of all users.
 Retrieve User by Name: Retrieves user details by username.
